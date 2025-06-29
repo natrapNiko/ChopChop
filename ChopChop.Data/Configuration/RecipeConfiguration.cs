@@ -53,6 +53,51 @@ namespace ChopChop.Data.Configuration
             entity.HasMany(r => r.Favorites)
                 .WithOne(f => f.Recipe)
                 .HasForeignKey(f => f.RecipeId);
+
+            entity.HasData(GenerateSeedRecipes());
         }
+
+        List<Recipe> GenerateSeedRecipes()
+        {
+            List<Recipe> seedRecipes = new List<Recipe>()
+            {
+                new Recipe
+                {
+                    Id = 1,
+                    Title = "Classic Spaghetti Bolognese",
+                    Instructions = "Cook pasta. In another pan, cook minced meat with tomato sauce, onion, and garlic. Combine and simmer.",
+                    ImageUrl = "https://example.com/images/spaghetti.jpg",
+                    AuthorId = "test-user",
+                    CreatedOn = new DateTime(2024, 6, 1),
+                    CategoryId = 1,
+                    IsDeleted = false
+                },
+                new Recipe
+                {
+                    Id = 2,
+                    Title = "Easy Pancakes",
+                    Instructions = "Mix flour, eggs, milk, and sugar. Fry in a pan until golden on both sides. Serve with syrup.",
+                    ImageUrl = "https://example.com/images/pancakes.jpg",
+                    AuthorId = "test-user",
+                    CreatedOn = new DateTime(2024, 6, 5),
+                    CategoryId = 2,
+                    IsDeleted = false
+                },
+                new Recipe
+                {
+                    Id = 3,
+                    Title = "Fresh Greek Salad",
+                    Instructions = "Chop cucumbers, tomatoes, olives, and feta cheese. Mix with olive oil and oregano.",
+                    ImageUrl = "https://example.com/images/greek_salad.jpg",
+                    AuthorId = "test-user",
+                    CreatedOn = new DateTime(2024, 6, 10),
+                    CategoryId = 3,
+                    IsDeleted = false
+                }
+            };
+
+            return seedRecipes;
+        }
+
     }
 }

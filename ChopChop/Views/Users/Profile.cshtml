@@ -1,0 +1,18 @@
+﻿@*@model UserProfileViewModel
+
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<h2>@Model.Username's Profile</h2>
+<p>Email: @Model.Email</p>
+
+<h4>My Recipes</h4>
+<ul>
+    @foreach (var recipe in Model.Recipes)
+    {
+        <li>
+            <a href="/Recipes/Details/@recipe.Id">@recipe.Title</a>
+        </li>
+    }
+</ul>*@

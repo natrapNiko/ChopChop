@@ -1,0 +1,28 @@
+﻿@*@model RecipeDetailsViewModel
+
+@{
+    ViewData["Title"] = @Model.Title;
+}
+
+<h1>@Model.Title</h1>
+<img src="@Model.ImageUrl" alt="@Model.Title" class="img-fluid" />
+
+<p>@Model.Description</p>
+
+<h4>Ingredients</h4>
+<ul>
+    @foreach (var ingredient in Model.Ingredients)
+    {
+        <li>@ingredient</li>
+    }
+</ul>
+
+<h4>Reviews</h4>
+@foreach (var review in Model.Reviews)
+{
+    <div>
+        <strong>@review.AuthorName</strong> – @review.Rating ★
+        <p>@review.Content</p>
+    </div>
+}
+*@
