@@ -1,6 +1,6 @@
-using System.Diagnostics;
-using ChopChop.Models;
+using ChopChop.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace ChopChop.Controllers
 {

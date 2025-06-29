@@ -1,4 +1,4 @@
-namespace ChopChop.Models
+namespace ChopChop.ViewModels
 {
     public class ErrorViewModel
     {

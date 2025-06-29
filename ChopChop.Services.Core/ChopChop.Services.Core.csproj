@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ChopChop.Data.Models\ChopChop.Data.Models.csproj" />
+    <ProjectReference Include="..\ChopChop.Data\ChopChop.Data.csproj" />
+    <ProjectReference Include="..\ChopChop.ViewModels\ChopChop.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -3,7 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChopChop", "ChopChop\ChopChop.csproj", "{A1E58A4E-DBAE-4A3B-AB2F-9865C4FACA33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChopChop.Web", "ChopChop\ChopChop.Web.csproj", "{A1E58A4E-DBAE-4A3B-AB2F-9865C4FACA33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChopChop.Data", "ChopChop.Data\ChopChop.Data.csproj", "{EF11D9D1-EDB9-44BD-81E0-E85BE97450EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChopChop.Data.Models", "ChopChop.Data.Models\ChopChop.Data.Models.csproj", "{ADCA8DE9-267F-49D0-A511-D4839D5E636A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{1AC481A5-EB29-44B1-A3D3-058478675A3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChopChop.Services.Core", "ChopChop.Services.Core\ChopChop.Services.Core.csproj", "{E1C5A770-CDBC-455C-BB33-70D642A5C5E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{9EC05D9E-6533-4DED-8412-E189211B8519}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChopChop.ViewModels", "ChopChop.ViewModels\ChopChop.ViewModels.csproj", "{03E090E5-F819-463B-A7B1-82E0C90CCDFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +29,32 @@ Global
 		{A1E58A4E-DBAE-4A3B-AB2F-9865C4FACA33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1E58A4E-DBAE-4A3B-AB2F-9865C4FACA33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1E58A4E-DBAE-4A3B-AB2F-9865C4FACA33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF11D9D1-EDB9-44BD-81E0-E85BE97450EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF11D9D1-EDB9-44BD-81E0-E85BE97450EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF11D9D1-EDB9-44BD-81E0-E85BE97450EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF11D9D1-EDB9-44BD-81E0-E85BE97450EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADCA8DE9-267F-49D0-A511-D4839D5E636A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADCA8DE9-267F-49D0-A511-D4839D5E636A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADCA8DE9-267F-49D0-A511-D4839D5E636A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADCA8DE9-267F-49D0-A511-D4839D5E636A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1C5A770-CDBC-455C-BB33-70D642A5C5E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1C5A770-CDBC-455C-BB33-70D642A5C5E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1C5A770-CDBC-455C-BB33-70D642A5C5E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1C5A770-CDBC-455C-BB33-70D642A5C5E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E090E5-F819-463B-A7B1-82E0C90CCDFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E090E5-F819-463B-A7B1-82E0C90CCDFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E090E5-F819-463B-A7B1-82E0C90CCDFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E090E5-F819-463B-A7B1-82E0C90CCDFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A1E58A4E-DBAE-4A3B-AB2F-9865C4FACA33} = {9EC05D9E-6533-4DED-8412-E189211B8519}
+		{EF11D9D1-EDB9-44BD-81E0-E85BE97450EA} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{ADCA8DE9-267F-49D0-A511-D4839D5E636A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{E1C5A770-CDBC-455C-BB33-70D642A5C5E9} = {1AC481A5-EB29-44B1-A3D3-058478675A3B}
+		{03E090E5-F819-463B-A7B1-82E0C90CCDFD} = {9EC05D9E-6533-4DED-8412-E189211B8519}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {04EEB054-E2DC-4250-B565-757FBE2D9087}

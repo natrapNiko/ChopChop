@@ -15,4 +15,11 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.15" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ChopChop.Data.Models\ChopChop.Data.Models.csproj" />
+    <ProjectReference Include="..\ChopChop.Data\ChopChop.Data.csproj" />
+    <ProjectReference Include="..\ChopChop.Services.Core\ChopChop.Services.Core.csproj" />
+    <ProjectReference Include="..\ChopChop.ViewModels\ChopChop.ViewModels.csproj" />
+  </ItemGroup>
+
 </Project>
