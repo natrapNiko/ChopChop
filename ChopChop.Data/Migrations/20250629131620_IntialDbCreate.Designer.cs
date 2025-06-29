@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChopChop.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250629130955_IntialDbCreate")]
+    [Migration("20250629131620_IntialDbCreate")]
     partial class IntialDbCreate
     {
         /// <inheritdoc />
