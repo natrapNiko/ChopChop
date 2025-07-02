@@ -12,10 +12,11 @@ namespace ChopChop.Data.Models
         public string UserId{ get; set; } = null!;
         public virtual IdentityUser User { get; set; } = null!;
 
+        public int CategoryId { get; set; }
+        public virtual Category Category { get; set; } = null!;
         public bool IsDeleted { get; set; }
 
         public virtual ICollection<Ingredient> Ingredients { get; set; } = new HashSet<Ingredient>();
-        public virtual ICollection<Category> Categories { get; set; } = new HashSet<Category>();
         public virtual ICollection<Comment> Comments { get; set; } = new HashSet<Comment>();
         public virtual ICollection<Favorite> Favorites { get; set; } = new HashSet<Favorite>();
 
