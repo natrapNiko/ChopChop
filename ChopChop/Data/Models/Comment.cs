@@ -9,6 +9,8 @@ namespace ChopChop.Data.Models
         public string Content { get; set; } = null!;
         public DateTime CreatedDate { get; set; }
 
+        public bool IsDeleted { get; set; }
+
         public string UserId { get; set; } = null!;
         public virtual IdentityUser User { get; set; } = null!;
 
