@@ -27,6 +27,7 @@ namespace ChopChop.Data.Models
 
         public virtual ICollection<UserProfile> UsersProfiles { get; set; } = new HashSet<UserProfile>();
         public virtual ICollection<Comment> Comments { get; set; } = new HashSet<Comment>();
+        public virtual ICollection<Ingredient> Ingredients { get; set; } = new HashSet<Ingredient>();
         public virtual ICollection<RecipeRating> Ratings { get; set; } = new HashSet<RecipeRating>();
 
 

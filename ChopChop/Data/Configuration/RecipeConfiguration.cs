@@ -15,7 +15,7 @@ namespace ChopChop.Data.Configuration
                 .IsRequired()
                 .HasMaxLength(100);
 
-            entity.Property(r => r.Ingredients)
+            entity.Property(r => r.Instructions)
                 .IsRequired()
                 .HasMaxLength(250);
 
@@ -44,11 +44,10 @@ namespace ChopChop.Data.Configuration
                 .WithOne(up => up.Recipe)
                 .HasForeignKey(up => up.RecipeId);
 
-
             entity.HasMany(r => r.Ingredients)
                 .WithOne(i => i.Recipe)
-                .HasForeignKey(i => i.RecipeId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .HasForeignKey(i => i.RecipeId);
+
 
             entity.HasMany(r => r.Comments)
                 .WithOne(co => co.Recipe)

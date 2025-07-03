@@ -23,8 +23,8 @@ namespace ChopChop.Data.Configuration
 
             entity.HasOne(i => i.Recipe)
                 .WithMany(r => r.Ingredients)
-                .HasForeignKey(i => i.RecipeId);
-
+                .HasForeignKey(i => i.RecipeId)
+                .IsRequired(false);
         }
     }
 }
