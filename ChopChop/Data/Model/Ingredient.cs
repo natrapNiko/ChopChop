@@ -1,11 +1,27 @@
-﻿namespace ChopChop.Data.Models
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
+
+namespace ChopChop.Data.Models
 {
     public class Ingredient 
     {
-        public int Id { get; set; }
-        public string Name { get; set; } = null!;
-        public string Quantity { get; set; } = null!;
-        public int RecipeId { get; set; }
-        public virtual Recipe Recipe { get; set; } = null!;
+            public int Id { get; set; }
+
+            [Required]
+            [MinLength(2)]
+            [MaxLength(50)]
+            public string Name { get; set; } = null!;
+
+            [Required]
+            public double Quantity { get; set; }
+
+            [Required]
+            [MaxLength(20)]
+            public string Unit { get; set; } = null!; // например грамове,милилитри, броя, ч.л. и така нататак
+
+            [Required]
+            public int RecipeId { get; set; }
+            public Recipe Recipe { get; set; } = null!;
+        
     }
 }

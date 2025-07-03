@@ -15,14 +15,14 @@ namespace ChopChop.Data.Configuration
                 .IsRequired()
                 .HasMaxLength(100);
 
-            entity.Property(r => r.Description)
+            entity.Property(r => r.Ingredients)
                 .IsRequired()
-                .HasMaxLength(5000);
+                .HasMaxLength(250);
 
             entity.Property(r => r.ImageUrl)
                 .IsRequired(false);
 
-            entity.Property(r => r.UserId)
+            entity.Property(r => r.AuthorId)
                .IsRequired();
 
             entity.Property(r => r.IsDeleted)
@@ -30,15 +30,20 @@ namespace ChopChop.Data.Configuration
 
             entity.HasQueryFilter(r => r.IsDeleted == false);
 
-            entity.HasOne(r => r.User)
+            entity.HasOne(r => r.Author)
             .WithMany()
-            .HasForeignKey(r => r.UserId)
+            .HasForeignKey(r => r.AuthorId)
             .OnDelete(DeleteBehavior.Restrict);
 
             entity.HasOne(r => r.Category)
                 .WithMany(c =>  c.Recipes)
                 .HasForeignKey(r =>r.CategoryId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasMany(r => r.UsersProfiles)
+                .WithOne(up => up.Recipe)
+                .HasForeignKey(up => up.RecipeId);
+
 
             entity.HasMany(r => r.Ingredients)
                 .WithOne(i => i.Recipe)
@@ -50,10 +55,7 @@ namespace ChopChop.Data.Configuration
                 .HasForeignKey(co => co.RecipeId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            entity.HasMany(r => r.Favorites)
-                .WithOne(f => f.Recipe)
-                .HasForeignKey(f => f.RecipeId)
-                .OnDelete(DeleteBehavior.Cascade);
+            
         }
     }
 }
